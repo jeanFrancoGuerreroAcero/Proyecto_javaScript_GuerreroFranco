@@ -339,12 +339,123 @@ while(booleanito){
         console.clear()
         if (QueDesea=="1"){
             for (var i of json[0]["postulados"]){
-                console.log("ID:",i["id"],i["nombre"])
-                
+                console.log("ID:",i["id"])
+                console.log("NOMBRE",i["nombre"])
+                console.log("APELLIDO: ",i["apellido"])
+                console.log("CEDULA",i["cedula"])
+                console.log("direcccion: ",i["direccion"])
             }
+            console.log("se le va a revisar la prueba a cada uno de los que postularon la prueba")
+            var estudiante=prompt("ingrese el id que identifica al postulado :") 
 
+            var prueba= prompt("¿en la prueba octuvo un procentaje mayor a 60?: ")
+
+            if (prueba>=60)
+                var nuevoEstado= "incrito"
+                json.update(json[0]["postulado"][estudiante],{estado: nuevoEstado})
+
+                console.clear()
+                console.log("que ruta le va a asignar")
+                console.log("1. nodeJs")
+                console.log("2. java")
+                console.log("3. Netcore")
+                var QueRuta=prompt("Que ruta tendra el camper")
+                console.log("")
+
+                if (QueRuta=="1")
+                    var NuevaRuta= "nodeJs"
+
+                    console.log("se le asigno la ruta al camper")
+                    console.log("nodeJs")
+                    var nuevoEstado2="cursando"
+
+                    var trainer="jholver"
+                    console.log("El trainer jholver es el encargado de la ruta java")
+                    //hacer un update con estas variables
+                    var fechaIni="12-06-2024"
+                    
+
+                    var fechaFin="30-06-2025"
+                    
+
+                    var salon="apolo"
+                    
+
+                    var grupo="M1"
+
+                    console.log("el camper vera: ")
+                    console.log("fundamentos de programacion")
+                    console.log("programacion web")
+                    
+                    console.log("")
+                    console.log("programacion formal")
+                    console.log("bases de datos")
+                    console.log("backend")
+                    var queModulo=prompt("que otro modulo vera el camper :")
+
+                    //hacer un update
+                if (QueRuta=="2")
+                    var NuevaRuta= "java"
+
+                    console.log("se le asigno la ruta al camper")
+                    console.log("java")
+                    var nuevoEstado2="cursando"
+
+                    var trainer="miguel"
+                    console.log("El trainer miguel es el encargado de la ruta java")
+                    //hacer un update con estas variables
+                    var fechaIni="18-07-2024"
+                    
+
+                    var fechaFin="18-07-2025"
+                    
+
+                    var salon="sputnik"
+                    
+
+                    var grupo="P1"
+
+                    console.log("el camper vera: ")
+                    console.log("fundamentos de programacion")
+                    console.log("programacion web")
+                    
+                    console.log("")
+                    console.log("programacion formal")
+                    console.log("bases de datos")
+                    console.log("backend")
+                    var queModulo=prompt("que otro modulo vera el camper :")
+                if (QueRuta=="3")
+                    var NuevaRuta= "Netcore"
+
+                    console.log("se le asigno la ruta al camper")
+                    console.log("Netcore")
+                    var nuevoEstado2="cursando"
+
+                    var trainer="juanca"
+                    console.log("El trainer juanca es el encargado de la ruta java")
+                    //hacer un update con estas variables
+                    var fechaIni="20-08-2024"
+                    
+
+                    var fechaFin="20-08-2025"
+                    
+
+                    var salon="artemis"
+                    
+
+                    var grupo="P1"
+
+                    console.log("el camper vera: ")
+                    console.log("fundamentos de programacion")
+                    console.log("programacion web")
+                    
+                    console.log("")
+                    console.log("programacion formal")
+                    console.log("bases de datos")
+                    console.log("backend")
+                    var queModulo=prompt("que otro modulo vera el camper :")
+    
         }
-
 
         console.log("hola")
         break
