@@ -11,11 +11,10 @@ var json = [
                 "direccion": "calle 1 #2",
                 "acudiente": "maria lizaraso",
                 "telefono": "3112812609",
-                "estado": "",
+                "estado":"",
                 "salon": "",
                 "trainer": "",
                 "riesgo": "",
-                "ruta": "",
                 "fechaIni": "12-03-2024",
                 "fechaFin": "13-04-2024",
                 "ocupado": "",
@@ -29,11 +28,9 @@ var json = [
                 "direccion": "call 1 #3",
                 "acudiente": "eduardo guerrero",
                 "telefono": "3188653147",
-                "estado": "",
                 "salon": "",
                 "trainer": "",
                 "riesgo": "",
-                "ruta": "",
                 "fechaIni": "12-03-2024",
                 "fechaFin": "13-04-2024",
                 "ocupado": "",
@@ -47,11 +44,9 @@ var json = [
                 "direccion": "Calle 1 #4",
                 "acudiente": "Jose Vidal",
                 "telefono": "3866060",
-                "estado": "",
                 "salon": "",
                 "trainer": "",
                 "riesgo": "",
-                "ruta": "",
                 "fechaIni": "12-03-2024",
                 "fechaFin": "13-04-2024",
                 "ocupado": "",
@@ -65,11 +60,9 @@ var json = [
                 "direccion": "Calle 1 #5",
                 "acudiente": "Maria Bendeck",
                 "telefono": "3741504",
-                "estado": "",
                 "salon": "",
                 "trainer": "",
                 "riesgo": "",
-                "ruta": "",
                 "fechaIni": "12-03-2024",
                 "fechaFin": "13-04-2024",
                 "ocupado": "",
@@ -334,9 +327,9 @@ while(booleanito){
         console.log("1. Inscribir postulados");
         console.log("2. Ingresar nota a campers que finalizaron modulo"); 
         console.log("3. Campers en peligro");
-        console.log("4. volver al menu principal")
+        console.log("4. volver al menu principal");
     QueDesea=prompt("que funcion vas a realizar:");
-        console.clear()
+        console.clear();
         if (QueDesea=="1"){
             for (var i of json[0]["postulados"]){
                 console.log("ID:",i["id"])
@@ -344,38 +337,52 @@ while(booleanito){
                 console.log("APELLIDO: ",i["apellido"])
                 console.log("CEDULA",i["cedula"])
                 console.log("direcccion: ",i["direccion"])
-            }
-            console.log("se le va a revisar la prueba a cada uno de los que postularon la prueba")
-            var estudiante=prompt("ingrese el id que identifica al postulado :") 
+            };
+            console.log("se le va a revisar la prueba a cada uno de los que postularon la prueba");
+            var estudiante=prompt("ingrese el id que identifica al postulado :");
+            var prueba= prompt("¿en la prueba octuvo un procentaje mayor a 60?: ");
 
-            var prueba= prompt("¿en la prueba octuvo un procentaje mayor a 60?: ")
-
-            if (prueba>=60)
-                var nuevoEstado= "incrito"
-                json.update(json[0]["postulado"][estudiante],{estado: nuevoEstado})
-
-                console.clear()
-                console.log("que ruta le va a asignar")
-                console.log("1. nodeJs")
-                console.log("2. java")
-                console.log("3. Netcore")
-                var QueRuta=prompt("Que ruta tendra el camper")
-                console.log("")
+            if (prueba>=60);
+                for (var i in json[estudiante-1][0]){
+                    var nuevoArchivo = json.push({"estado":"inscrito"})};
+                console.clear();
+                console.log("que ruta le va a asignar");
+                console.log("1. nodeJs");
+                console.log("2. java");
+                console.log("3. Netcore");
+                var QueRuta=prompt("Que ruta tendra el camper");
+                console.log("");
+                console.clear();
 
                 if (QueRuta=="1")
-                    var NuevaRuta= "nodeJs"
+                    for (var i in json[estudiante-1][0]){
+                        var nuevoArchivo = json.push({"Ruta":"nodeJs"})};
 
-                    console.log("se le asigno la ruta al camper")
-                    console.log("nodeJs")
-                    var nuevoEstado2="cursando"
+                    console.log("se le asigno la ruta al camper");
+                    console.log("nodeJs");
+                    for (var i of json[0]["postulados"]){
+                        console.log("ID:",i["id"]);
+                        console.log("NOMBRE",i["nombre"]);
+                        console.log("APELLIDO: ",i["apellido"]);
+                        console.log("CEDULA",i["cedula"]);
+                        console.log("direcccion: ",i["direccion"]);
+                        console.log("ESTADO: ",i["estado"]);
+                    };
+                    
+                    for (var i in json[estudiante-1][0]){
+                        var nuevoTrainer = json.push({"trainer":"jholver"})};
 
-                    var trainer="jholver"
                     console.log("El trainer jholver es el encargado de la ruta java")
                     //hacer un update con estas variables
-                    var fechaIni="12-06-2024"
-                    
+                    for (var i in json[estudiante-1][0]){
+                        var fechaIni = json.push({"fechaIni":"12-06-2024"})};   
 
-                    var fechaFin="30-06-2025"
+                    console.log("12-06-2024")
+                    for (var i in json[estudiante-1][0]){
+                        var fechaFin = json.push({"fechaFin":"30-06-2025"})};
+                        
+                    console.log();
+                    
                     
 
                     var salon="apolo"
